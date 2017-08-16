@@ -20,7 +20,7 @@
             <h3>Vous êtes ?</h3>
             <div>
                 <a href="" ><img src="images/user-select.png" alt="étudiant"></a>
-                <a href="" ><img scr="" alt="correcteur"></a>
+                <a href="" ><img src="images/worker-select.png" alt="correcteur"></a>
             </div>
         </section>
     </body>
