@@ -11,18 +11,22 @@
 
     <body>
 
-        <section>
-            <h1>ANTALLAGI</h1>
+        <section class="main">
+            <h1 class="maintitle">ANTALLAGI</h1>
             <h2>Dites adieu aux fautes d'orthographe !</h2>
         </section>
 
-        <section>
+        <section class="box">
             <h3>Vous êtes ?</h3>
-            <div>
+            <div class="flex">
                 <a href="" ><img src="images/user-select.png" alt="étudiant"></a>
                 <a href="" ><img src="images/worker-select.png" alt="correcteur"></a>
             </div>
         </section>
+
+        <footer>
+            © 2017 <a href="https://github.com/Maxime-le-Goupil">Maxime_le_goupil</a>
+        </footer>
     </body>
 
 </html>
