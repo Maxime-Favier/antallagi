@@ -1,2 +1,2 @@
 # ANTALLAGI
-just another boring website for a friend
+just another (with not much interest) website for a friend
