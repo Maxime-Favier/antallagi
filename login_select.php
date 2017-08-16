@@ -6,11 +6,23 @@
     <title>antallagi</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="generator" content="Geany 1.24.1" />
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="login_select.css" />
 </head>
 
     <body>
 
+        <section>
+            <h1>ANTALLAGI</h1>
+            <h2>Dites adieu aux fautes d'orthographe !</h2>
+        </section>
+
+        <section>
+            <h3>Vous êtes ?</h3>
+            <div>
+                <a href="" ><img src="images/user-select.png" alt="étudiant"></a>
+                <a href="" ><img scr="" alt="correcteur"></a>
+            </div>
+        </section>
     </body>
 
 </html>
