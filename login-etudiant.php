@@ -34,10 +34,13 @@
 				if(isset($_GET['mdp']) AND $_GET['mdp'] == 1)
 				{
 			?>
-					<h4>mauvais mot de passe</h4>
+					<h4>mauvais email ou mot de passe</h4>
 			<?php
 				}
 			?>
 		</div>
+		<!----<footer>---->
+			<!----© 2017 <a href="https://github.com/Maxime-le-Goupil">Maxime_le_goupil</a>---->
+		<!----</footer>---->
 	</body>
 </html>	

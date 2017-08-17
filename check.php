@@ -3,10 +3,12 @@
 	$id = htmlspecialchars($_POST['id']);
 	$mdp = htmlspecialchars($_POST['mdp']);
 	
+	$pass_hache = sha1($mdp);
+	
 	$req = $bdd->prepare('SELECT num FROM etudiant WHERE id = :id AND mdp = :mdp');
 	$req->execute(array(
 		'id' => $id,
-		'mdp' => $mdp));
+		'mdp' => $pass_hache));
 	$resultat = $req->fetch();
 	
 	if ($resultat)
@@ -22,7 +24,7 @@
 	}
 	else{
 		echo 'Mauvais identifiant ou mot de passe !';
-		header('Location: login-etudiant.php?mdp=1&deco=0');
+		header('Location: login-etudiant.php?mdp=1&amp;deco=0');
 	}
 	
 

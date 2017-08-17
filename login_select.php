@@ -20,7 +20,7 @@
             <h3>Vous êtes ?</h3>
             <div class="flex">
 				<div class="left">
-					<a href="login-etudiant.php?deco=0&mdp=0" ><img src="images/user-select.png" alt="étudiant"></a>
+					<a href="login-etudiant.php?deco=0&amp;mdp=0" ><img src="images/user-select.png" alt="étudiant"></a>
 					<h4>espace étudiant</h3>
 				</div>
 				<div class="right">
