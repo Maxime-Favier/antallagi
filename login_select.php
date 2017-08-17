@@ -6,7 +6,7 @@
     <title>antallagi</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="generator" content="Geany 1.24.1" />
-    <link rel="stylesheet" href="login_select.css" />
+    <link rel="stylesheet" href="css/login_select.css" />
 </head>
 
     <body>
@@ -19,8 +19,14 @@
         <section class="box">
             <h3>Vous êtes ?</h3>
             <div class="flex">
-                <a href="" ><img src="images/user-select.png" alt="étudiant"></a>
-                <a href="" ><img src="images/worker-select.png" alt="correcteur"></a>
+				<div class="left">
+					<a href="login-etudiant.php?deco=0&mdp=0" ><img src="images/user-select.png" alt="étudiant"></a>
+					<h4>espace étudiant</h3>
+				</div>
+				<div class="right">
+					<a href="" ><img src="images/worker-select.png" alt="correcteur"></a>
+					<h4>espace correcteur</h3>
+                </div>
             </div>
         </section>
 
