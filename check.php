@@ -6,7 +6,7 @@
 	
 	$pass_hache = sha1($mdp);
 	
-	$req = $bdd->prepare('SELECT num FROM etudiant WHERE id = :id AND mdp = :mdp');
+	$req = $bdd->prepare('SELECT num,pseudo FROM etudiant WHERE id = :id AND mdp = :mdp');
 	$req->execute(array(
 		'id' => $id,
 		'mdp' => $pass_hache));
@@ -17,7 +17,7 @@
 		echo 'Vous êtes co élève';
 		session_start();
 		$_SESSION['ide'] = $resultat['num'];
-		//$_SESSION['name'] = $resultat['name'];
+		$_SESSION['name'] = $resultat['pseudo'];
 		//$_SESSION['surname'] = $resultat['surname'];
 		//$_SESSION['class_id'] = $resultat['class_id'];
 		header('Location: espace-client/language-select.php');
