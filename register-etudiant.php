@@ -13,10 +13,13 @@
             <div class="input" >
 				<h2>Créer un compte</h2>
 				
-				<form action="register.php" method="post" id="connect" style="display: inline-block;">
-					<input type="text" name="pseudo" placeholder="pseudo"/>
-					<input type="text" name="id" placeholder="email"/>
-					<input type="password" name="mdp" placeholder="Mot de passe"/>
+				<form action="register.php" method="post" id="connect" style="display: block;">
+					<label for="pseudo">Pseudo :</label>
+					<input type="text" name="pseudo" placeholder="pseudo" required/><br/><br/>
+					<label for="id">E-mail :</label>
+					<input type="text" name="id" placeholder="email" required/><br/><br/>
+					<label for="mdp">Mot de passe :</label>
+					<input type="password" name="mdp" placeholder="Mot de passe" required/><br/><br/>
 					<input type="submit" value="Connexion"/>
 				</form>	
 				<br/>
