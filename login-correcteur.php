@@ -14,9 +14,11 @@
             <div class="input" >
 				<h2>Se connecter :</h2>
 				
-				<form action="check-correcteur.php" method="post" id="connect" style="display: inline-block;">
-					<input type="text" name="id" placeholder="email"/>
-					<input type="password" name="mdp" placeholder="Mot de passe"/>
+				<form action="check-correcteur.php" method="post" id="connect" style="display: block;">
+					<label for="id">E-mail :</label>
+					<input type="email" name="id" placeholder="email" required/><br/><br/>
+					<label for="mdp">Mot de passe :</label>
+					<input type="password" name="mdp" placeholder="Mot de passe" required/><br/><br/>
 					<input type="submit" value="Connexion"/>
 				</form>	
 				<br/>

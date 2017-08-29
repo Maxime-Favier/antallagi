@@ -1,5 +1,6 @@
 <?php
 	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	
 	$id = htmlspecialchars($_POST['id']);
 	$mdp = htmlspecialchars($_POST['mdp']);
 	
@@ -23,7 +24,7 @@
 		
 	}
 	else{
-		echo 'Mauvais identifiant ou mot de passe !';
+		//echo 'Mauvais identifiant ou mot de passe !';
 		header('Location: login-etudiant.php?mdp=1&amp;deco=0');
 	}
 	
