@@ -15,7 +15,7 @@
 	<title>ANTALLAGI langues</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.24.1" />
-	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/language-select.css" />
 </head>
 	<body>
 		
