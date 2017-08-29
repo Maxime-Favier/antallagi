@@ -15,6 +15,7 @@ indent_mode=2
 [project]
 name=site
 base_path=/var/www/html
+description=
 
 [long line marker]
 long_line_behaviour=1
@@ -22,8 +23,8 @@ long_line_column=72
 
 [files]
 current_page=1
-FILE_NAME_0=2452;HTML;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Findex.html;0;4
-FILE_NAME_1=2056;CSS;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fcss.css;0;4
+FILE_NAME_0=710;CSS;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fcss%2Flogin_select.css;0;4
+FILE_NAME_1=153;CSS;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fcss%2Fmain.css;0;4
 
 [VTE]
-last_dir=/root
+last_dir=/home/pi

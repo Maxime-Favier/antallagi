@@ -7,12 +7,13 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="generator" content="Geany 1.24.1" />
     <link rel="stylesheet" href="css/login_select.css" />
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 </head>
 
     <body>
 
         <section class="main">
-            <h1 class="maintitle">ANTALLAGI</h1>
+            <h1 class="maintitle"><strong>ANTALLAGI</strong></h1>
             <h2>Dites adieu aux fautes d'orthographe !</h2>
         </section>
 
@@ -24,7 +25,7 @@
 					<h4>espace étudiant</h3>
 				</div>
 				<div class="right">
-					<a href="" ><img src="images/worker-select.png" alt="correcteur"></a>
+					<a href="login-correcteur.php" ><img src="images/worker-select.png" alt="correcteur"></a>
 					<h4>espace correcteur</h3>
                 </div>
             </div>
