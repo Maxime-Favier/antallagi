@@ -15,12 +15,12 @@
 	if ($resultat)
 	{
 		echo 'Vous êtes co élève';
-		//session_start();
-		//$_SESSION['ide'] = $resultat['id'];
+		session_start();
+		$_SESSION['ide'] = $resultat['num'];
 		//$_SESSION['name'] = $resultat['name'];
 		//$_SESSION['surname'] = $resultat['surname'];
 		//$_SESSION['class_id'] = $resultat['class_id'];
-		//header('Location: student_page.php');
+		header('Location: espace-client/language-select.php');
 		
 	}
 	else{
