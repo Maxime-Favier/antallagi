@@ -1,0 +1,80 @@
+nav
+{
+	display:flex
+	
+}
+
+.buttonbox
+{
+	background-color:#cccccc;
+	width:125px;
+	height: 20px;
+	text-align:center;
+	margin-left:5%;
+	text-decoration:none;
+	align-items: flex-end;
+	font-size: medium;
+	margin-top: 50px;
+	border: 1px white solid;
+}
+
+.platforme
+{
+	margin:auto;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.avatar
+{
+	width:70px;
+	height:70px;
+}
+
+.profile
+{
+	text-align:center;
+	margin-left:45%;
+}
+
+body
+{
+	background-color: #cccccc;
+}
+
+h1
+{
+	margin-top:5%;
+	text-align:center;
+	font-size:40px;
+}
+
+.flex
+{
+	display: flex;
+	margin-left: 15%;
+	margin-right: 15%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.data
+{
+	text-align:center;
+	margin-right:10px;
+}
+
+.info
+{
+	border: 1px #0DC5B9 solid;
+	font-weight:bold;
+}
+
+.lien
+{
+	color:#BFBFBF;
+	text-decoration:none;
+	background-color:#A52A2A;
+}
+
+

@@ -11,6 +11,10 @@
 	{
 		header('Location: language-select.php');
 	}
+	if(!isset($_SESSION['name']))
+	{
+		header('Location: ../check.php');
+	}
 	
 	/*echo $_POST['consigne'];
 	echo $_POST['devoir'];
@@ -19,7 +23,7 @@
 	*/
 	
 	
-	if(isset($_POST['consigne']) AND isset($_POST['devoir']) AND isset($_GET['idc']))
+	if(isset($_POST['consigne']) AND isset($_POST['devoir']) AND isset($_GET['idc']) AND isset($_SESSION['name']))
 	{
 		$consigne = htmlspecialchars($_POST['consigne']);
 		$devoir = htmlspecialchars($_POST['devoir']);
@@ -28,10 +32,11 @@
 		
 		
 		
-		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `consigne`, `devoir`, `status`, `date`, `correction`) VALUES (:correct, :etud, :consigne, :devoir, \'En attente de correction\', NOW(), \'\')');
+		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `pseudo`, `consigne`, `devoir`, `status`, `date`, `correction`) VALUES (:correct, :etud, :pseudo, :consigne, :devoir, \'En attente de correction\', NOW(), \'\')');
 		$req ->execute(array(
 				'correct' => $idc,
 				'etud' => $ide,
+				'pseudo' => $_SESSION['name'],
 				'consigne' => $consigne,
 				'devoir' => $devoir));
 		echo 'vous avez bien été enregistré';

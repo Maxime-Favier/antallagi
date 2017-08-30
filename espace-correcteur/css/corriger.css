@@ -1,0 +1,65 @@
+nav
+{
+	display:flex
+	
+}
+
+.buttonbox
+{
+	background-color:#cccccc;
+	width:125px;
+	height: 20px;
+	text-align:center;
+	margin-left:5%;
+	text-decoration:none;
+	align-items: flex-end;
+	font-size: medium;
+	margin-top: 50px;
+	border: 1px white solid;
+}
+
+.platforme
+{
+	margin:auto;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.avatar
+{
+	width:70px;
+	height:70px;
+}
+
+.profile
+{
+	text-align:center;
+	margin-left:45%;
+}
+
+body
+{
+	background-color: #cccccc;
+	text-align:center;
+}
+
+h1
+{
+	margin-top:50px;
+	color:#555555;
+	font-size:40px;
+}
+
+h3
+{
+	color:#B1684D;
+	font-size:25px;
+}
+
+p
+{
+	text-align: justify;
+	margin-left:5%;
+	margin-right:5%;
+}
+
