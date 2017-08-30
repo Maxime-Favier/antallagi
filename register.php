@@ -17,6 +17,7 @@
 				'mdp' => $pass_hache,
 				'pseudo' => $pseudo));
 			echo 'vous avez bien été enregistré';
+			header('Location: login-etudiant.php');
 		}
 		
 		else

@@ -18,8 +18,6 @@
 		session_start();
 		$_SESSION['ide'] = $resultat['num'];
 		$_SESSION['name'] = $resultat['pseudo'];
-		//$_SESSION['surname'] = $resultat['surname'];
-		//$_SESSION['class_id'] = $resultat['class_id'];
 		header('Location: espace-client/language-select.php');
 		
 	}

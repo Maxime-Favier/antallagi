@@ -22,7 +22,17 @@
 		<nav>
 			<div class='profile'>
 				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
-				<h3><?php echo $_SESSION['name'];?></h3>
+				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
+							{
+								echo $_SESSION['name'];
+							}
+						    else
+							{
+								//echo 'erreur';
+								header('Location: ../login-etudiant.php?mdp=1');
+							}
+					?>
+				</h3>			
 			</div>
 			
 			<div class="buttonbox">
@@ -35,17 +45,20 @@
 			<h1>Choisissez votre correcteur :</h1>
 			<div class='flex'>
 				<?php
-						$reponse = $bdd->query('SELECT pseudo,reputation FROM `correcteur` WHERE `language`=\'espagnol\'');
+						$reponse = $bdd->query('SELECT num,pseudo,reputation FROM `correcteur` WHERE `language`=\'espagnol\'');
 						
 						
 						while ($data = $reponse->fetch())
 						{
 				?>
 				<div class='data'>
+					
 					<img src="images/correcteur-homme.jpg" alt="correcteur"><br/>
 					<div class='info'>
-						<h2><?php echo $data['pseudo'];?></h2><br/>
+						<h2><?php echo $data['pseudo'];?></h2></a><br/>
 						<h4><?php echo $data['reputation'];?>/20</h4>
+						<a class='lien' href="correction.php?idc=<?php echo $data['num'];?>"/>Choisir ce correcteur</a>
+						
 					</div>
 				</div>
 				<?php
