@@ -42,23 +42,27 @@
 	<body>
 		
 		<nav>
+			<div>
+				<a href='main.php'/><h1 class="nav1">Page d'accueil</h1></a>
+			</div>
 			<div class='profile'>
 				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
-				<h2><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
+				<h6><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
 							{
 								echo $_SESSION['name'];
 							}
 						    else
 							{
+								//echo 'erreur';
 								header('Location: ../check-correcteur.php');
 							}
 					?>
-				</h2>			
+				</h6>			
 			</div>
 			
 			<div class="buttonbox">
-				<a href="deco.php" class="platforme">DECONECTION</a>
-			</div>
+				<a href="deco.php" class="platforme">DECONNEXION</a>
+			</div>	
 		</nav>
 		
 		<section>

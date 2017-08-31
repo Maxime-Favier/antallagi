@@ -13,7 +13,7 @@
     <body>
 
         <section class="main">
-            <h1 class="maintitle"><strong>ANTALLAGI</strong></h1>
+            <h1 class="maintitle"><a href='index.html'/><strong>ANTALLAGI</strong></h1></a>
             <h2>Dites adieu aux fautes d'orthographe !</h2>
         </section>
 
@@ -31,9 +31,7 @@
             </div>
         </section>
 
-        <footer>
-            © 2017 <a href="https://github.com/Maxime-le-Goupil">Maxime_le_goupil</a>
-        </footer>
+        
     </body>
 
 </html>

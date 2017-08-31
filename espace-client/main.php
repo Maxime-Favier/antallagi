@@ -18,10 +18,14 @@
 	<title>Vos correction</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.24.1" />
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 	<body>
 		
 		<nav>
+			<div>
+				<a href='language-select.php'/><h1 class="nav1">Demander une correction</h1></a>
+			</div>
 			<div class='profile'>
 				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
 				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
@@ -38,23 +42,14 @@
 			</div>
 			
 			<div class="buttonbox">
-				<a href="deco.php" class="platforme">DECONECTION</a>
+				<a href="deco.php" class="platforme">DECONNEXION</a>
 			</div>	
 		</nav>
 		
 		<section>
-			<a href='language-select.php'/><h1>Demander une correction</h1></a>
-			<h1>Vos corrections</h1>
-			<table>
-				<caption>Tableau des corrections</caption>
-
-				<tr>
-					<th>Nombre de mots</th>
-					<th>Status</th>
-					<th>Consigne</th>
-					<th>Voir le ticket</th>
-				</tr>
-				
+			
+			<h2>Vos corrections</h2>
+				<div class='data'>
 				<?php
 					$reponse = $bdd->prepare('SELECT `id`,`num-edu`,`consigne`,`devoir`,`status` FROM `correction` WHERE `num-edu`=?');
 					$reponse->execute(array($ide));					
@@ -62,18 +57,20 @@
 					{
 				
 				?>
-				
-				 <tr>
-					<td><?php echo substr_count($data['devoir'], ' ');?> mots</td>
-					<td><?php echo $data['status'];?></td>
-					<td><?php echo mb_substr($data['consigne'], 0, 30, 'UTF-8');?></td>
-					<td><a href='see-correction.php?id=<?php echo $data['id'];?>'/>Voir le ticket</a</td>
-				</tr>
-				
+					<div>
+					<img src="images/fichier.jpg" alt="fichier" class='img1'><br/>
+						<div class='info'>
+							<h4><?php echo mb_substr($data['consigne'], 0, 10, 'UTF-8');?></h2></a>
+							<h4><?php echo $data['status'];?></h4>
+							<h4><?php echo substr_count($data['devoir'], ' ');?> mots</h4>
+							<a class='lien' href='see-correction.php?id=<?php echo $data['id'];?>'/>Voir la correction</a>
+						</div>
+					</div>
 				<?php
 					}
 					$reponse->closeCursor();
 				?>
+				</div>
 		</section>
 		
 	</body>

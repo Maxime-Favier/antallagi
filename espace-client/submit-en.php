@@ -34,7 +34,7 @@
 				'consigne' => $consigne,
 				'devoir' => $devoir));
 		echo 'vous avez bien été enregistré';
-		header('Location: language-select.php');
+		header('Location: main.php');
 	} 
 	else
 	{

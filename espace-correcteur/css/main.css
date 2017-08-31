@@ -1,45 +1,72 @@
 nav
 {
-	display:flex
+	display:flex;
+	flex-wrap:nowrap;
+	background-color:#4285F4;
+	padding:0px, 0px, 0px,0px;
+	width:100%;
+	height: 55px;
+}
+.nav1
+{
+	color:#FFFFFF;
+	font-style:normal;
+	font-size: 20px;
+	text-decoration:none;
+	font-weight:normal;
+	padding-top:12px;
+	margin-top:0px;
+	margin-left: 20px
+}
+
+a:link 
+{ 
+	text-decoration:none; 
+} 
+
 	
+.avatar
+{
+	width:30px;
+	height:30px;
+	padding:0px, 0px, 0px,0px;
+	margin-top:7px;
+}
+.profile
+{
+	color:#FFFFFF;
+	font-size:10px;
+	text-align:center;
+	margin-left: 70%;
+	padding:0px, 0px, 0px,0px;
+	margin:0px, 0px, 0px,0px;
+}
+
+h3
+{	
+	margin:auto;
+	text-align:center;
+	padding:0px, 0px, 0px,0px;
 }
 
 .buttonbox
 {
-	background-color:#cccccc;
+	margin-top:15px;
 	width:125px;
 	height: 20px;
 	text-align:center;
-	margin-left:5%;
-	text-decoration:none;
-	align-items: flex-end;
-	font-size: medium;
-	margin-top: 50px;
-	border: 1px white solid;
+	margin-left:1%;
+	background-color:#90EE90;
 }
 
 .platforme
 {
-	margin:auto;
-	text-decoration:none;
-	color:#FFFFFF;
-}
-
-.avatar
-{
-	width:70px;
-	height:70px;
-}
-
-.profile
-{
-	text-align:center;
-	margin-left:45%;
+	color:#000000;
 }
 
 body
 {
-	background-color: #cccccc;
+	background-color:#74CFE2;
 }
 
 h1

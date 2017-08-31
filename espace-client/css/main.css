@@ -21,11 +21,11 @@ nav
 
 a:link 
 { 
-	text-decoration:none; 
+ text-decoration:none; 
 } 
 
 	
-.avatar
+img
 {
 	width:30px;
 	height:30px;
@@ -67,38 +67,34 @@ h3
 body
 {
 	background-color:#74CFE2;
+	text-align:center;
 }
-h1
+
+h2
 {
 	margin-top:5%;
-	text-align:center;
 	font-size:40px;
 }
-
-.flex
+.img1
 {
-	display: flex;
-	margin-left: 15%;
-	margin-right: 15%;
-	justify-content: center;
-	flex-wrap: wrap;
+	width:256px;
+	height: 256px;
 }
-
 .data
 {
-	text-align:center;
-	margin-right:10px;
+	display:flex;
+	flex-wrap:wrap;
+	margin-left:10%;
+	margin-right:10%;
+	justify-content:center;
+	margin-left:10%;
+	margin-right:10%;
 }
 
 .info
 {
-	border: 1px #0DC5B9 solid;
-	font-weight:bold;
+	border:1px black solid;
+	margin-left:10px;
+	margin-right:10px;
 }
 
-.lien
-{
-	color:#BFBFBF;
-	text-decoration:none;
-	background-color:#A52A2A;
-}

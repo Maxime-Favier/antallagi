@@ -18,7 +18,7 @@
 		session_start();
 		$_SESSION['ide'] = $resultat['num'];
 		$_SESSION['name'] = $resultat['pseudo'];
-		header('Location: espace-client/language-select.php');
+		header('Location: espace-client/main.php');
 		
 	}
 	else{

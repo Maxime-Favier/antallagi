@@ -13,7 +13,7 @@
 .nav
 {
 	background-color:#395B69;
-	display:flex;
+	display:hidden;
 	width:100%;
 	justify-content: space-between;
     align-items: flex-end;
@@ -61,6 +61,7 @@ nav a
 	text-decoration:none;
 	align-items: flex-end;
 	border: 1px black inset;
+	border-radius: 10px;
 	font-family: serif;
 	font-size: x-large;
 }

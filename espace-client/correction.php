@@ -23,31 +23,55 @@
 	<link rel="stylesheet" href="css/correction-submit.css"/>
 </head>
 	<body>
-		<h1>Envoyez votre texte se faire une beauté...</h1>
-		<img src="images/upload.jpg" alt="upload" >
-		<h2>Exportez votre texte</h2>
-		
-		<form action="submit-en.php?idc=<?php echo $_GET['idc'];?>" method="post" id="connect" style="display: block;">
-			<p>
-				<label for="consigne">
-					Tapez la consigne de votre devoir
-				</label>
-				<br />
-       
-				<textarea name="consigne" id="consigne" rows="5" cols="50" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required></textarea>       
-			</p>
+		<nav>
+			<div>
+				<a href='language-select.php'/><h1 class="nav1">Demander une correction</h1></a>
+			</div>
+			<div class='profile'>
+				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
+				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
+							{
+								echo $_SESSION['name'];
+							}
+						    else
+							{
+								//echo 'erreur';
+								header('Location: ../login-etudiant.php?mdp=1');
+							}
+					?>
+				</h3>			
+			</div>
 			
-			<p>
-				<label for="devoir">
-					Tapez votre texte à corriger. Vous pouvez aussi mettre un lien vers un espace de stockage en ligne
-				</label>
-				<br />
-       
-				<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required ></textarea>
-			</p>
+			<div class="buttonbox">
+				<a href="deco.php" class="platforme">DECONNEXION</a>
+			</div>	
+		</nav>
+		<div class='center'>
+			<h1>Envoyez votre texte se faire une beauté...</h1>
+			<img src="images/upload.jpg" alt="upload" >
+			<h2>Exportez votre texte</h2>
 			
-			<input type="submit" value="Envoyer" />
-		</form>	
-		
+			<form action="submit-en.php?idc=<?php echo $_GET['idc'];?>" method="post" id="connect" style="display: block;">
+				<p>
+					<label for="consigne">
+						Tapez la consigne de votre devoir
+					</label>
+					<br />
+		   
+					<textarea name="consigne" id="consigne" rows="5" cols="50" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required></textarea>       
+				</p>
+				
+				<p>
+					<label for="devoir">
+						Tapez votre texte à corriger. Vous pouvez aussi mettre un lien vers un espace de stockage en ligne
+					</label>
+					<br />
+		   
+					<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required ></textarea>
+				</p>
+				
+				<input type="submit" value="Envoyer" />
+			</form>	
+		</div>
 	</body>
 </html>

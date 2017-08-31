@@ -20,6 +20,9 @@
 	<body>
 		
 		<nav>
+			<div>
+				<a href='language-select.php'/><h1 class="nav1">Demander une correction</h1></a>
+			</div>
 			<div class='profile'>
 				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
 				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
@@ -36,9 +39,8 @@
 			</div>
 			
 			<div class="buttonbox">
-				<a href="deco.php" class="platforme">DECONECTION</a>
-			</div>
-			
+				<a href="deco.php" class="platforme">DECONNEXION</a>
+			</div>	
 		</nav>
 		
 		<section>

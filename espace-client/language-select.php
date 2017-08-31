@@ -19,6 +19,30 @@
 </head>
 	<body>
 		
+		<nav>
+			<div>
+				<a href='language-select.php'/><h1 class="nav1">Demander une correction</h1></a>
+			</div>
+			<div class='profile'>
+				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
+				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
+							{
+								echo $_SESSION['name'];
+							}
+						    else
+							{
+								//echo 'erreur';
+								header('Location: ../login-etudiant.php?mdp=1');
+							}
+					?>
+				</h3>			
+			</div>
+			
+			<div class="buttonbox">
+				<a href="deco.php" class="platforme">DECONNEXION</a>
+			</div>	
+		</nav>
+		
 		<h1>Choisissez la langue</h1>
 		
 		<div class='lang'>

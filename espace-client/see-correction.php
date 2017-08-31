@@ -26,10 +26,14 @@
 	<meta charset="utf-8"/>
 	<title>Voir la correction</title>
 	<meta name="generator" content="Geany 1.24.1" />
+	<link rel="stylesheet" href="css/see.css" />
 </head>
 	<body>
 		
 		<nav>
+			<div>
+				<a href='language-select.php'/><h1 class="nav1">Demander une correction</h1></a>
+			</div>
 			<div class='profile'>
 				<img src="images/avatar.jpg" alt="avatar" class='avatar' >
 				<h3><?php if(isset($_SESSION['name']) AND $_SESSION['name']!=='')
@@ -38,6 +42,7 @@
 							}
 						    else
 							{
+								//echo 'erreur';
 								header('Location: ../login-etudiant.php?mdp=1');
 							}
 					?>
@@ -45,19 +50,19 @@
 			</div>
 			
 			<div class="buttonbox">
-				<a href="deco.php" class="platforme">DECONECTION</a>
+				<a href="deco.php" class="platforme">DECONNEXION</a>
 			</div>	
 		</nav>
 		
 		<section>
-			<h1>Votre ticket</h1>
+			<h1>Votre Correction</h1>
 			<?php
 				$reponse = $bdd->prepare('SELECT `id`,`num-correct`,`num-edu`,`consigne`,`devoir`,`status`,`correction`,`note` FROM `correction` WHERE `id`=? AND `num-edu`=?');
 				$reponse->execute(array($id,$ide));	
 				$data = $reponse->fetch();
 			?>
 			
-			<h2>Status: <?php echo $data['status'];?></h2>
+			<h5>Status: <?php echo $data['status'];?></h5>
 			<h2>Consigne</h2>
 			<p><?php echo $data['consigne'];?></p>
 			<h2>Devoir</h2>
@@ -68,22 +73,24 @@
 		
 		<section>
 			<h2>Notez votre correcteur</h2>
+			<div class='marge'>
 			<?php
 				if($data['note']==0)
 				{
 					
-					echo '<form method="post" action="noter.php">
+					echo '<p></p><form method="post" action="noter.php">
 					<label>Votre note</label> : <input type="number" id="note" name="note" min=0 max=20 required/> /20
 					<input type="hidden" value="' .$data['id']. '"name="id" id="id"/>
 					<input type="hidden" value="' .$data['num-correct']. '"name="num-correct" id="num-correct"/>
 					<input type="submit" value="Envoyer" />
-					</form>';
+					</form></p>';
 				}
 				else
 				{
-					echo "Vous avez déjà noté votre correcteur!";
+					echo "<p>Vous avez déjà noté votre correcteur!</p>";
 				}
 			?>
+			</div>
 		</section>
 		<?php
 				$reponse->closeCursor();
