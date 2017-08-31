@@ -13,14 +13,12 @@
 	$idc=$_SESSION['idc'];
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="fr">
+<!DOCTYPE html>
+<html>
 
 <head>
 	<title>ANTALLAGI langues</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<meta name="generator" content="Geany 1.24.1" />
+	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/main.css" />
 </head>
 	<body>
@@ -50,6 +48,12 @@
 		</nav>
 		
 		<section>
+			<?php 
+				if(isset($_GET['sub']) AND $_GET['sub']==1)
+				{
+					echo "<p>Merci de votre contribution</p>";
+				}
+			?>
 			<h1>Boite de réception des demandes</h1>
 			<div class='flex'>
 				<?php

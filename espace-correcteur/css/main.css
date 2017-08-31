@@ -103,5 +103,10 @@ h1
 	text-decoration:none;
 	background-color:#A52A2A;
 }
-
+p
+{
+	text-align:center;
+	color:#800080;
+	font-size:16px;
+}
 

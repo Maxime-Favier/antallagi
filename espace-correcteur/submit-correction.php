@@ -21,7 +21,7 @@
 		$req = $bdd->prepare('UPDATE `correction` SET `status` = \'Corrigé\', `correction` = ? WHERE `id` = ? AND `num-correct` = ?');
 		$req->execute(array($correction, $id, $idc));
 		
-		header('Location: main.php');
+		header('Location: main.php?sub=1');
 	}
 	else
 	{

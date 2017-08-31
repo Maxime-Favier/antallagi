@@ -25,7 +25,6 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Voir la correction</title>
-	<meta name="generator" content="Geany 1.24.1" />
 	<link rel="stylesheet" href="css/see.css" />
 </head>
 	<body>

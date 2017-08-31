@@ -29,13 +29,12 @@
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
 	<title>Corriger</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8" />
 	<meta name="generator" content="Geany 1.24.1" />
 	<link rel="stylesheet" href="css/corriger.css" />
 </head>
@@ -78,7 +77,7 @@
 			<h3>A corriger</h3>
 			<p><?php echo $data['devoir']; ?></p><br/>
 			
-			<form action="refuse.php" method="post" id="connect" style="display: block;">
+			<form action="refuse.php" method="post" id="refuse" style="display: block;">
 				<h4>Cliquez sur ce boutton si vous ne voulez / pouvez pas corriger ce devoir</h4>
 				<input type="hidden" name="id" value="<?php echo $data['id'];?>">
 				<input type="submit" value="Refuser" />

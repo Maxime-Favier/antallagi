@@ -15,16 +15,16 @@
 				
 				<form action="register.php" method="post" id="connect" style="display: block;">
 					<label for="pseudo">Pseudo :</label>
-					<input type="text" name="pseudo" placeholder="pseudo" required/><br/><br/>
+					<input type="text" name="pseudo" id="pseudo" placeholder="pseudo" required/><br/><br/>
 					<label for="id">E-mail :</label>
-					<input type="text" name="id" placeholder="email" required/><br/><br/>
+					<input type="email" name="id" id="id" placeholder="email" required/><br/><br/>
 					<label for="mdp">Mot de passe :</label>
 					<input type="password" name="mdp" placeholder="Mot de passe" required/><br/><br/>
 					<input type="submit" value="Connexion"/>
 				</form>	
 				<br/>
 				<br/>
-				<a href="login-etudiant.php?deco=0&amp;mdp=0"<h3>se connecter</h3></a>
+				<a href="login-etudiant.php?deco=0&amp;mdp=0"><h3>se connecter</h3></a>
 			</div>
 				<?php
 					if(isset($_GET['error']) AND $_GET['error'] == 1)

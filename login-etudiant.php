@@ -15,14 +15,14 @@
 				
 				<form action="check.php" method="post" id="connect" style="display: block;">
 					<label for="id">E-mail :</label>
-					<input type="email" name="id" placeholder="email" required/><br/><br/>
+					<input type="email" name="id" id='id' placeholder="email" required/>
 					<label for="mdp">Mot de passe :</label>
-					<input type="password" name="mdp" placeholder="Mot de passe" required/><br/><br/>
+					<input type="password" name="mdp" id="mdp" placeholder="Mot de passe" required/><br/><br/>
 					<input type="submit" value="Connexion"/>
 				</form>	
 				<br/>
 				<br/>
-				<a href="register-etudiant.php"<h3>ou créer un compte</h3></a>
+				<a href="register-etudiant.php"><h3>ou créer un compte</h3></a>
             </div>
 			<?php
 				if(isset($_GET['deco']) AND $_GET['deco'] == 1)
