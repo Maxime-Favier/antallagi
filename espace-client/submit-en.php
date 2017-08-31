@@ -16,12 +16,6 @@
 		header('Location: ../check.php');
 	}
 	
-	/*echo $_POST['consigne'];
-	echo $_POST['devoir'];
-	echo $_GET['idc'];
-	echo $_SESSION['ide'];
-	*/
-	
 	
 	if(isset($_POST['consigne']) AND isset($_POST['devoir']) AND isset($_GET['idc']) AND isset($_SESSION['name']))
 	{
@@ -32,7 +26,7 @@
 		
 		
 		
-		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `pseudo`, `consigne`, `devoir`, `status`, `date`, `correction`) VALUES (:correct, :etud, :pseudo, :consigne, :devoir, \'En attente de correction\', NOW(), \'\')');
+		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `pseudo`, `consigne`, `devoir`, `status`, `date`, `correction`, `note`) VALUES (:correct, :etud, :pseudo, :consigne, :devoir, \'En attente de correction\', NOW(), \'\', 0)');
 		$req ->execute(array(
 				'correct' => $idc,
 				'etud' => $ide,

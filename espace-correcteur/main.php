@@ -60,7 +60,7 @@
 					<img src="images/fichier.jpg" alt="fichier"><br/>
 					<div class='info'>
 						<h2><?php echo $data['pseudo'];?></h2></a>
-						<h4><?php echo substr_count($data['devoir'], ' ')?> mots</h4>
+						<h4><?php echo substr_count($data['devoir'], ' ');?> mots</h4>
 						<a class='lien' href="corriger.php?id=<?php echo $data['id'];?>"/>Corriger</a>
 						
 					</div>
