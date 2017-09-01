@@ -5,12 +5,14 @@
 		<title>login</title>
 		<link rel="icon" href=""/>
 		<link rel="stylesheet" href="css/login-etudiant.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"/>
 	</head>
 	
 	
 	<body>
 		<div class="page">
             <div class="input" >
+				<a href='index.html'><h1>ANTALLAG​I</h1></a>
 				<h2>Se connecter :</h2>
 				
 				<form action="check.php" method="post" id="connect" style="display: block;">

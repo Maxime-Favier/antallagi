@@ -56,7 +56,7 @@
 					</label>
 					<br />
 		   
-					<textarea name="consigne" id="consigne" rows="5" cols="50" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required></textarea>       
+					<textarea name="consigne" id="consigne" rows="5" cols="50" placeholder="Votre consigne / Titre" required></textarea>       
 				</p>
 				
 				<p>
@@ -65,7 +65,7 @@
 					</label>
 					<br />
 		   
-					<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required ></textarea>
+					<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Votre devoir" required ></textarea>
 				</p>
 				
 				<input type="submit" value="Envoyer" />

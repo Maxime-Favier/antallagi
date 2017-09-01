@@ -11,14 +11,27 @@
 		
 		if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['id']) AND $mdp!== '' AND $pseudo!== '')
 		{
-			$pass_hache = sha1($_POST['mdp']);
-			$req = $bdd->prepare('INSERT INTO correcteur (num, pseudo, id, mdp, reputation, language) VALUES (NULL, :pseudo, :id, :mdp , 10, :language)');
-			$req->execute(array(
-				'pseudo' => $pseudo,
-				'id' => $id,
-				'mdp' => $pass_hache,
-				'language' => $pays));
-			echo 'vous avez bien été enregistré';
+			$reqa = $bdd->prepare('SELECT id FROM correcteur WHERE id=?');
+			$reqa->execute(array($id));
+			$data = $reqa->fetch();
+			
+			if ($data)
+			{
+				header('Location: register-correcteur.php?error=2');
+			}
+			else
+			{
+				
+				$pass_hache = sha1($_POST['mdp']);
+				$req = $bdd->prepare('INSERT INTO correcteur (num, pseudo, id, mdp, reputation, language) VALUES (NULL, :pseudo, :id, :mdp , 10, :language)');
+				$req->execute(array(
+					'pseudo' => $pseudo,
+					'id' => $id,
+					'mdp' => $pass_hache,
+					'language' => $pays));
+				echo 'vous avez bien été enregistré';
+				header('Location: login-correcteur.php');
+			}
 		}
 		
 		else

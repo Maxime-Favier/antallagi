@@ -5,12 +5,14 @@
 		<title>Créer un compte correcteur</title>
 		<link rel="icon" href=""/>
 		<link rel="stylesheet" href="css/login-etudiant.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"/>
 	</head>
 	
 	
 	<body>
 		<div class="page">
             <div class="input" >
+				<a href='index.html'><h1>ANTALLAG​I</h1></a>
 				<h2>Créer un compte</h2>
 				
 				<form action="register-correcteur-process.php" method="post" id="connect" style="display: block;">
@@ -38,6 +40,14 @@
 					{
 				?>
 					<h4>Remplissez tous les champs et mettez une adresse email valide</h4>
+				<?php
+					}
+				?>
+				<?php
+					if(isset($_GET['error']) AND $_GET['error'] == 2)
+					{
+				?>
+					<h4>Un compte avec le même Email existe déjà. Contactez antallagiweb@gmail.com pour le récupérer</h4>
 				<?php
 					}
 				?>

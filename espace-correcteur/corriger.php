@@ -87,7 +87,7 @@
 			<form action="submit-correction.php" method="post" id="connect" style="display: block;">
 				<h3>Vos comentaires, remarques, et corrections</h3>
 				
-				<textarea name="correction" id="correction" rows="25" cols="150" placeholder="Ne pas utiliser les caractères &,', les guillemets, < et >" required></textarea>
+				<textarea name="correction" id="correction" rows="25" cols="150" placeholder="Votre correction" required></textarea>
 				<input type="hidden" name="id" value="<?php echo $data['id'];?>"></br>
 				<input type="submit" value="Envoyer" />
 			</form>

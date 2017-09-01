@@ -10,14 +10,27 @@
 		
 		if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['id']) AND $mdp!== '' AND $pseudo!== '')
 		{
-			$pass_hache = sha1($_POST['mdp']);
-			$req = $bdd->prepare('INSERT INTO etudiant (num, id, mdp, pseudo) VALUES (NULL, :id, :mdp, :pseudo)');
-			$req->execute(array(
-				'id' => $id,
-				'mdp' => $pass_hache,
-				'pseudo' => $pseudo));
-			echo 'vous avez bien été enregistré';
-			header('Location: login-etudiant.php');
+			$reqa = $bdd->prepare('SELECT id FROM etudiant WHERE id=?');
+			$reqa->execute(array($id));
+			$data = $reqa->fetch();
+			
+			if ($data)
+			{
+				echo "un compte existe deja";
+				header('Location: register-etudiant.php?error=2');
+				
+			}
+			else
+			{
+				$pass_hache = sha1($_POST['mdp']);
+				$req = $bdd->prepare('INSERT INTO etudiant (num, id, mdp, pseudo) VALUES (NULL, :id, :mdp, :pseudo)');
+				$req->execute(array(
+					'id' => $id,
+					'mdp' => $pass_hache,
+					'pseudo' => $pseudo));
+				echo 'vous avez bien été enregistré';
+				header('Location: login-etudiant.php');
+			}
 		}
 		
 		else

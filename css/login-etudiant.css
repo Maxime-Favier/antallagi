@@ -42,7 +42,16 @@ a:link
 { 
 	text-decoration:none; 
 } 
+
 h2
 {
 	color:#D49696;
+}
+
+h1
+{
+	font-size:70px;
+	font-family: 'Chewy', cursive, Arial, serif;
+	font-weight: bold;
+	color:#E74C3C;
 }
