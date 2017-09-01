@@ -1,5 +1,5 @@
 <?php
-
+	session_start(); 
 	if(isset($_GET['id']) AND $_GET['id']==! '')
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
