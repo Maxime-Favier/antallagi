@@ -1,6 +1,6 @@
 <?php
 	
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	session_start(); 
 	
 	if(!isset($_SESSION['ide']))
@@ -23,18 +23,31 @@
 		$devoir = htmlspecialchars($_POST['devoir']);
 		$idc = htmlspecialchars($_GET['idc']);
 		$ide = htmlspecialchars($_SESSION['ide']);
-		
-		
-		
-		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `pseudo`, `consigne`, `devoir`, `status`, `date`, `correction`, `note`) VALUES (:correct, :etud, :pseudo, :consigne, :devoir, \'En attente de correction\', NOW(), \'\', 0)');
+		$n_filename = null;
+
+		$req = $bdd->prepare('INSERT INTO `correction` (`num-correct`, `num-edu`, `pseudo`, `consigne`, `devoir`, `status`, `date`, `correction`, `note`, `filename`) VALUES (:correct, :etud, :pseudo, :consigne, :devoir, \'En attente de correction\', NOW(), \'\', 0, :filename)');
+		if($_FILES['fichier']['size'] != 0 ){//il y a un fichier
+			if($_FILES['fichier']['size'] < 10485760){
+				$extension_upload = strtolower(  substr(  strrchr($_FILES['fichier']['name'], '.'),1)  );
+				$f_id = md5(uniqid(rand(), true));
+				$n_filename = $f_id .".". $extension_upload;
+				echo $n_filename;
+				$path = "/ressources/" . $n_filename;
+				$upload = move_uploaded_file($_FILES['fichier']['tmp_name'], $path);
+			}else{
+				header('Location: correction.php?toobig=1');
+		}
+		}
 		$req ->execute(array(
 				'correct' => $idc,
 				'etud' => $ide,
 				'pseudo' => $_SESSION['name'],
 				'consigne' => $consigne,
-				'devoir' => $devoir));
+				'devoir' => $devoir,
+				'filename' => $n_filename));
 		echo 'vous avez bien été enregistré';
-		header('Location: main.php');
+		//header('Location: main.php');
+
 	} 
 	else
 	{

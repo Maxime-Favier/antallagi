@@ -1,6 +1,6 @@
 <?php
 	
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	session_start(); 
 	
 	if(!isset($_SESSION['ide']))
@@ -56,16 +56,17 @@
 					</label>
 					<br />
 		   
-					<textarea name="consigne" id="consigne" rows="5" cols="50" placeholder="Votre consigne / Titre" required></textarea>       
+					<textarea name="consigne" id="consigne" rows="1" cols="50" placeholder="Votre consigne / Titre" required></textarea>       
 				</p>
 				
 				<p>
 					<label for="devoir">
-						Tapez votre texte à corriger. Vous pouvez aussi mettre un lien vers un espace de stockage en ligne
+						Tapez votre texte à corriger. Vous pouvez aussi mettre un lien vers un espace de stockage en ligne ou importer un fichier.
 					</label>
 					<br />
-		   
-					<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Votre devoir" required ></textarea>
+					<label for="fichier">Fichier à importer : </label><input type="file" name="fichier" />
+					<br />
+					<textarea name="devoir" id="devoir" rows="25" cols="90" placeholder="Votre devoir"></textarea>
 				</p>
 				
 				<input type="submit" value="Envoyer" />

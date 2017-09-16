@@ -1,5 +1,5 @@
 <?php
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	
 	$id = htmlspecialchars($_POST['id']);
 	$mdp = htmlspecialchars($_POST['mdp']);

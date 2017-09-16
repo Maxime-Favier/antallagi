@@ -1,5 +1,5 @@
 <?php
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	session_start(); 
 	
 	if(!isset($_SESSION['ide']))

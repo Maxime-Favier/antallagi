@@ -1,5 +1,5 @@
 <?php
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	session_start(); 
 	
 	if(!isset($_SESSION['idc']))
@@ -57,8 +57,7 @@
 			<h1>Boite de réception des demandes</h1>
 			<div class='flex'>
 				<?php
-						$reponse = $bdd->prepare('SELECT `id`,`num-correct`,`num-edu`,`pseudo`,`devoir` FROM `correction` WHERE `num-correct`=? AND `status` LIKE \'En attente de correction\'');
-						$reponse->execute(array($idc));					
+						$reponse = $bdd->query('SELECT `id`,`num-correct`,`num-edu`,`pseudo`,`devoir` FROM `correction` WHERE `num-correct`=? AND `status` LIKE \'En attente de correction\' ORDER BY id DESC');				
 						while ($data = $reponse->fetch())
 						{
 				?>

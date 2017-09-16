@@ -1,5 +1,5 @@
 <?php
-	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=antallagi;charset=utf8', 'root', '');
 	
 	
 	if (isset($_POST['id']) AND isset($_POST['mdp']) AND isset($_POST['pseudo']) AND isset($_POST['pays']))
