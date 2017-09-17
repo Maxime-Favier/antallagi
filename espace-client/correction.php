@@ -49,7 +49,7 @@
 			<img src="images/upload.jpg" alt="upload" >
 			<h2>Exportez votre texte</h2>
 			
-			<form action="submit-en.php?idc=<?php echo $_GET['idc'];?>" method="post" id="connect" style="display: block;">
+			<form action="submit-en.php?idc=<?php echo $_GET['idc'];?>" method="post" id="connect" style="display: block;" enctype="multipart/form-data">
 				<p>
 					<label for="consigne">
 						Tapez la consigne de votre devoir
